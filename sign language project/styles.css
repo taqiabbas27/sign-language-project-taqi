@@ -1,0 +1,289 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #7f7fd5, #91eae4);
+    color: #1e1e3f;
+    line-height: 1.6;
+    user-select: none;
+}
+
+/* Header Styles */
+header {
+    background: #311b92;
+    color: #f0f8ff;
+    padding: 45px 15px 50px 15px;
+    text-align: center;
+    border-radius: 0 0 70px 70px;
+    box-shadow: 0 8px 32px rgba(49, 27, 146, 0.7);
+}
+
+header h1 {
+    font-size: 3.8rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+header p.subtitle {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.7px;
+    color: #dda0dd;
+}
+
+/* Navigation Styles */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 18px 0;
+    background: #ede7f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(49, 27, 146, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-btn {
+    background: #7e57c2;
+    color: #e3f2fd;
+    border: none;
+    padding: 14px 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(126, 87, 194, 0.6);
+    transition: all 0.35s ease;
+    text-decoration: none; /* Make it look like a button */
+}
+
+.nav-btn:hover {
+    background: #512da8;
+    color: #ffd9f0;
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 25px 50px 25px;
+}
+
+.content-section {
+    margin-top: 55px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 40px 45px 50px 45px;
+    box-shadow: 0 9px 40px rgba(49, 27, 146, 0.2);
+}
+
+.content-section h2 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #311b92;
+    border-bottom: 5px solid #ff4081;
+    padding-bottom: 10px;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* New styles for welcome text */
+.welcome-text {
+    font-size: 1.2em; /* Increase font size for better readability */
+    color: #333; /* Darker text color for contrast */
+    margin-bottom: 20px; /* Space below the paragraph */
+    line-height: 1.5; /* Improve line spacing */
+}
+
+/* Grid layout for Alphabet and Numbers */
+.grid {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    justify-items: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #bb86fc, #6200ee);
+    color: #fff;
+    border-radius: 25px;
+    padding: 25px 22px;
+    box-shadow: 0 4px 20px rgba(187, 134, 252, 0.7);
+    text-align: center;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.label {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+}
+
+.desc {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Phrases section */
+.phrases-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.phrase-card {
+    background: linear-gradient(45deg, #ff80ab, #ff4081);
+    border-radius: 30px;
+    padding: 30px 27px;
+    box-shadow: 0 5px 22px rgba(255, 64, 129, 0.85);
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.35rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.phrase-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Tips list */
+.tips-list {
+    list-style: none;
+    counter-reset: my-counter;
+    max-width: 720px;
+    margin: auto;
+    font-weight: 700;
+    font-size: 1.22rem;
+    color: #311b92;
+    padding-left: 0; /* Ensure no padding on the left */
+}
+
+.tips-list li {
+    position: relative;
+    padding-left: 60px; /* Increased padding for better spacing */
+    margin-bottom: 25px; /* Increased margin for more space between items */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+.tips-list li::before {
+    counter-increment: my-counter;
+    content: counter(my-counter);
+    position: absolute;
+    left: 15px; /* Position the number further to the left */
+    top: 0;
+    background: #6200ee;
+    color: #fff;
+    font-weight: 900;
+    padding: 8px 12px; /* Adjust padding for the number */
+    border-radius: 50%;
+    font-size: 1.2rem; /* Slightly larger font size for the number */
+    text-align: center;
+    line-height: 1; /* Center the number vertically */
+}
+
+
+
+/* Learn more links */
+.learn-more-text {
+    text-align: center;
+    max-width: 720px;
+    font-weight: 700;
+    font-size: 1.22rem;
+    color: #311b92;
+    margin-bottom: 25px;
+}
+
+.learn-links {
+    max-width: 780px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.learn-links li {
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.learn-links a {
+    color: inherit;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.learn-links a:hover {
+    text-decoration: underline;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px; /* Padding around the section */
+    margin: 20px 0; /* Margin to separate from other sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#about h2 {
+    font-size: 1.8rem; /* Larger font size for the heading */
+    color: #311b92; /* Dark color for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+#about p {
+    font-size: 1.1rem; /* Standard font size for paragraphs */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #333; /* Dark gray color for text */
+}
+
+#about ul {
+    list-style-type: disc; /* Bullet points for the list */
+    padding-left: 20px; /* Indentation for the list */
+}
+
+#about ul li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 1.1rem; /* Standard font size for list items */
+    color: #333; /* Dark gray color for list items */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 70px;
+    padding: 30px 0;
+    background: linear-gradient(90deg, #611e92, #ff4081);
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 1.2px;
+    border-radius: 70px 70px 0 0;
+}
